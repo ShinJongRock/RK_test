@@ -1,6 +1,9 @@
 import { FileOutlined, PieChartOutlined, UserOutlined,DesktopOutlined,TeamOutlined} from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { useState } from 'react';
+
+import Dnd from "../component/dnd";
+
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -63,7 +66,7 @@ const App = () => {
               background: colorBgContainer,
             }}
           >
-                음 이게 되노
+          
           </div>
         </Content>
         <Footer
