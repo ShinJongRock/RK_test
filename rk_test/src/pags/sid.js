@@ -3,6 +3,8 @@ import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { useState } from 'react';
 
 import Dnd from "../component/dnd";
+import { red } from '@mui/material/colors';
+import { autocompleteClasses } from '@mui/material';
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -56,17 +58,25 @@ const App = () => {
               margin: '16px 0',
             }}
           >
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            {/* <Breadcrumb.Item>User</Breadcrumb.Item>
+            <Breadcrumb.Item>Bill</Breadcrumb.Item> */}
           </Breadcrumb>
+
+
+          {/* 출력 공간 */}
           <div
             style={{
+              justifyContent:'center',
+              alignItems:'center',
               padding: 24,
               minHeight: 360,
+              height: '100%',
               background: colorBgContainer,
+              // backgroundColor: 'red',
+              
             }}
           >
-          
+            <Dnd/>
           </div>
         </Content>
         <Footer

@@ -33,6 +33,7 @@ const Search = styled('div')(({ theme }) => ({
     },
 }));
 
+//돋보기 아이콘
 const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -41,9 +42,12 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    
 }));
 
+//검색창
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
+ 
     color: 'inherit',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
@@ -92,6 +96,7 @@ export default function PrimarySearchAppBar() {
             id={menuId}
             keepMounted
             transformOrigin={{
+               
                 vertical: 'top',
                 horizontal: 'right',
             }}
@@ -121,7 +126,7 @@ export default function PrimarySearchAppBar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+                <IconButton size="large" aria-label="show 4 new mails" color="inherit" > 
                     <Badge >
                         <MailIcon />
                     </Badge>
