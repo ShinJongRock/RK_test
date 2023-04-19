@@ -102,11 +102,11 @@ export default class App extends React.Component {
                 
                 <div style={{ border :' 1px solid' ,width:'400px' , height:'400px' ,marginTop:'-100px' ,borderRadius: '15px',}}>
 
-                <form ref={c => (this.form = c)} onSubmit={this.handleSubmit}  style={{ alignItems:'center', margin:'120px'}}>
+                <form ref={c => (this.form = c)} onSubmit={this.handleSubmit}  style={{  margin:'120px'}}>
                  
                  
-                <div className='form-group'>
-                    <small>Card Number:</small>
+                <div  >
+                    <div style={{marginLeft:'-180px' }}> Card Number:</div>
 
                     <input
                       type='tel'
@@ -114,15 +114,16 @@ export default class App extends React.Component {
                       className='form-control'
                       placeholder='Card Number'
                       pattern='[\d| ]{16,22}'
-                      maxLength='19'
+                      maxLength='30'
                       required
                       onChange={this.handleInputChange}
                       onFocus={this.handleInputFocus}
+                      style={{width:'300px',height:'30px' , marginLeft:'-70px', borderRadius: '10px',}}
                     />
                   </div>
                  
                   <div className='form-group'>
-                    <small>Name on card:</small>
+                    <div style={{marginLeft:'-180px' ,marginTop:'10px'}}>Name on card:</div>
 
                     <input
                       type='text'
@@ -133,11 +134,14 @@ export default class App extends React.Component {
                       required
                       onChange={this.handleInputChange}
                       onFocus={this.handleInputFocus}
+                      style={{width:'300px',height:'30px' , marginLeft:'-70px', borderRadius: '10px',}}
                     />
                   </div>
-             
 
-                  <div className='form-group'>
+                  <table style={{marginLeft:'-73px' ,marginTop:'10px'}}>
+                  <tr  >
+                    <td>
+                    <div className='form-group'>
                     <small>Expiration Date:</small>
 
                     <input
@@ -149,9 +153,13 @@ export default class App extends React.Component {
                       required
                       onChange={this.handleInputChange}
                       onFocus={this.handleInputFocus}
+                      style={{width:'140px',borderRadius: '10px',height:'30px'}}
                     />
                   </div>
-                  <div className='form-group'>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    <div className='form-group'>
                     <small>CVC: </small>
 
                     <input
@@ -163,9 +171,17 @@ export default class App extends React.Component {
                       required
                       onChange={this.handleInputChange}
                       onFocus={this.handleInputFocus}
+                      style={{width:'140px',borderRadius: '10px',height:'30px'}}
                     />
                   </div>
                   <input type='hidden' name='issuer' value={issuer} />
+
+                    </td>
+                  </tr>
+                  </table>
+
+                 
+                 
                   <div style={{margin:'20px'}}>
                   <button type='submit'
                         style={{
