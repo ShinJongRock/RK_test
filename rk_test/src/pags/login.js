@@ -41,18 +41,21 @@ export default function SignIn() {
   };
 
   return (
-    <div className='login'>
+    <div className='login' style={{backgroundColor:'#3c3c3c',}} >
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="md">
         <CssBaseline />
         <Box   sx={{
             marginTop: 20,
-     
-            display: 'flex',
+            justifyContent:'center',
+            alignItems:'center',
             flexDirection: 'column',
             alignItems: 'center',
             border : '1px solid',
-            boxShadow : " 1px 1px gray"
+            boxShadow : " 1px 1px gray",
+            backgroundColor: 'white',
+            borderRadius: '15px',
+            border:'white'
             
           }}>
         <Box
@@ -66,19 +69,17 @@ export default function SignIn() {
             
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
+    
+          <Typography component="h1" variant="h2">
+            <strong style={{}}>Log in</strong>
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 2}}>
             <TextField
               margin="normal"
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Username"
               name="email"
               autoComplete="email"
               autoFocus
@@ -93,29 +94,28 @@ export default function SignIn() {
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
+     
+  
+
+            <button type='submit'
+             style={{
+              backgroundColor:'#008080',
+              color:'white',
+              width:'100%',
+              height: '50px',
+              border: '1px solid white',
+              marginTop:'20px',
+              borderRadius: '5px'
+              }}>
+              <h3>Log In</h3>
+            </button>
             <Grid container>
-              <Grid item xs>
+              <Grid item xs style={{marginTop:'20px'}}>
                 <Link href="#" variant="body2">
-                  Forgot password?
+                    여기에 머 적고싶은거 말하셈!!
                 </Link>
               </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
+            
             </Grid>
           </Box>
           </Box>
