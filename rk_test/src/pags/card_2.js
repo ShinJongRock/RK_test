@@ -191,7 +191,10 @@ export default class App extends React.Component {
                           height: '50px',
                           border: '1px solid white',
                           marginTop:'20px',
-                          borderRadius: '5px'
+                          borderRadius: '5px',
+                          display:'flex',
+                          justifyContent:'center',
+                          alignItems:'center'
                           }}>
                           <h3>등록</h3>
                         </button>
